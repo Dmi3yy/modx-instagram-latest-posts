@@ -1,0 +1,15 @@
+<div class="instagram">
+    <header>
+        <h2>Instagram</h2>
+        <a href="[[+url]]">Instagram</a>
+    </header>
+
+    [[+items:isnot=``:then=`
+    <ul>
+        [[+items]]
+    </ul>
+    `:else=`
+    <p>Please add some posts in your Instagram profile.</p>
+    `]]
+
+</div>
