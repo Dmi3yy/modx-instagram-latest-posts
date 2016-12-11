@@ -108,6 +108,7 @@ class InstagramLatestPosts
         // Get JSON data in an object containing resources
         $resources = $this->getResources($data);
 
+        // Check if there is no any resource
         if (count($resources) == 0) {
             $this->error = 'There are no posts yet in the profile: ' . $this->accountName;
             return false;
