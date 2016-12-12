@@ -304,14 +304,14 @@ class InstagramLatestPosts
 // Create config array
 $config = [
     'modx'          => $modx,
-    'accountName'   => (isset($accountName)) ? $accountName : '',
-    'limit'         => (isset($limit)) ? $limit : 6,
-    'showVideo'     => (isset($showVideo)) ? $showVideo : 0,
-    'imageQuality'  => (isset($imageQuality)) ? $imageQuality : 'low_resolution',
-    'videoQuality'  => (isset($videoQuality)) ? $videoQuality : 'low_resolution',
-    'innerTpl'      => (isset($innerTpl)) ? $innerTpl : 'Instagram-Inner',
-    'outerTpl'      => (isset($outerTpl)) ? $outerTpl: 'Instagram-Outer',
-    'errorTpl'      => (isset($errorTpl)) ? $errorTpl: 'Instagram-Error',
+    'accountName'   => $modx->getOption('accountName', $scriptProperties, '', true),
+    'limit'         => $modx->getOption('limit', $scriptProperties, 6, true),
+    'showVideo'     => $modx->getOption('showVideo', $scriptProperties, 0, true),
+    'imageQuality'  => $modx->getOption('imageQuality', $scriptProperties, 'low_resolution', true),
+    'videoQuality'  => $modx->getOption('videoQuality', $scriptProperties, 'low_resolution', true),
+    'innerTpl'      => $modx->getOption('innerTpl', $scriptProperties, 'Instagram-Inner', true),
+    'outerTpl'      => $modx->getOption('outerTpl', $scriptProperties, 'Instagram-Outer', true),
+    'errorTpl'      => $modx->getOption('errorTpl', $scriptProperties, 'Instagram-Error', true),
 ];
 
 // Create a new InstagramLatestPosts class instance
